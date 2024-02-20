@@ -151,6 +151,7 @@ header h2{
     display: block!important;
     border: none!important;
     padding: 12px;
+	word-break: break-all;
 }
 .custom-card h3{
 	margin: 0px;
@@ -190,6 +191,9 @@ header h2{
     transition: all .5s;
     transform : translateY(-10px);
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.move-up:mousedown{
+	transform : translateY(-20px);
 }
 
 @media (min-width: 992px){
