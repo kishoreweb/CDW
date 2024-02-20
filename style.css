@@ -1,0 +1,199 @@
+body{
+	font-family: "Poppins", sans-serif !important;
+	background: #f2f2f3 !important;
+}
+
+.poppins-thin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.poppins-extralight {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-extrabold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.poppins-black {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.poppins-thin-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.poppins-extralight-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.poppins-light-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.poppins-regular-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.poppins-medium-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.poppins-semibold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.poppins-bold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.poppins-extrabold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.poppins-black-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+main > .container {
+  padding: 40px 15px 0;
+}
+
+
+header{
+	margin:0px;
+	padding: 1.2rem 0;
+	background-color: #8aa2f0 !important;
+}
+header h2{
+	color: #fff;
+}
+
+.title{
+	margin: 0px;
+	padding: 0px;
+	color: #878ba0;
+	font-size: 34px;
+    font-weight: 400;
+}
+.user-pic {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+}
+.info-data {
+    margin: 0;
+    padding: 0 0 0 10px;
+}
+.custom-card {
+	margin: 0 5px 0 5px;
+	padding-left: 12.5px;
+    padding-right: 12.5px;
+	box-shadow: 0 4px 20px #2f8fe812;
+    background-color: #fff;
+    border-radius: 10px!important;
+    display: block!important;
+    border: none!important;
+    padding: 12px;
+}
+.custom-card h3{
+	margin: 0px;
+	padding: 0 0 5px 0;
+	font-size: 17px !important;
+	color: #535353;
+}
+.custom-card p{
+	margin: 0px;
+	padding: 0px;
+	font-size: 14px;
+	color: #acacac;
+}
+
+/* Bootstrap 4 text input with search icon */
+
+.has-search .form-control {
+    padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
+.form-group .form-control{
+    border-radius: 50px;
+}
+.move-up:hover{
+    background-color: #fff;
+    transition: all .5s;
+    transform : translateY(-10px);
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+@media (min-width: 992px){
+.row-cols-lg-4>* {
+    flex: 0 0 auto;
+    width: 24% !important;
+}

@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+	<head>
+	<title>CDW</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	   
+	<!-- CSS here -->
+	<link rel="stylesheet" href="style.css">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	
+	<!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:wght@100&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+	
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+		
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$.ajax({url: "https://mocki.io/v1/ddb7e0a8-e218-4e36-b1be-b902cdb1c098", success: function(result){
+					var admins, members;
+					var adminsTemplate="", membersTemplate = "";
+					admins = result.filter(x=>x.role === "admin");
+					members = result.filter(x=>x.role === "member");
+					
+					$.each(admins, function () {
+						adminsTemplate += "<div class='custom-card move-up col d-flex align-items-start'><img src='"+ this.img +"' alt="+ this.first_name +" class='user-pic' /><div class='info-data'><h3 class='mb-0 fs-4 text-body-emphasis'>" + this.first_name + "</h3><p>" + this.last_name + "</p><p>" + this.email + "</p><p>" + this.role + "</p></div></div>";
+						
+					});
+					$("#tblAdminstrators").append(adminsTemplate);
+					$.each(members, function () {
+						membersTemplate += "<div class='custom-card move-up col d-flex align-items-start'><img src='"+ this.img +"' alt="+ this.first_name +" class='user-pic' /><div class='info-data'><h3 class='mb-0 fs-4 text-body-emphasis'>" + this.first_name + "</h3><p>" + this.last_name + "</p><p>" + this.email + "</p><p>" + this.role + "</p></div></div>";
+						
+					});
+					$("#tblMembers").append(membersTemplate);
+				}});
+			});
+		</script>
+	</head>
+	<body>
+	
+	<!-- START Header -->
+	<header class="p-3 mb-3 border-bottom">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <h2>Team</h2>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"></ul>
+		
+		<div class="form-group has-search">
+			<span class="fa fa-search form-control-feedback"></span>
+			<input type="text" class="form-control" placeholder="Search">
+	  </div>
+
+      </div>
+    </div>
+  </header>
+
+<!-- START page content -->
+<main>
+  <div class="container">
+    <h1 class="title">Adminstrators</h1>
+	<div id="administrator_section">
+		<div id="tblAdminstrators" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
+		
+		</div>
+	</div>
+  </div>
+</main>
+
+<main>
+  <div class="container" style="padding:0px;">
+	<hr>
+  </div>
+ </main>
+
+<main>
+  <div class="container">
+    <h1 class="title">Members</h1>
+	<div id="members_section">
+		<div id="tblMembers" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
+		</div>
+	</div>
+  </div>
+</main>	
+	
+	
+</body>
+</html>
